@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LifeNotes | Ali Abdaal</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+    rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: url('img/bg_gold_clean_xd.webp') center/cover no-repeat;
+      color: #3a2a10;
+    }
+
+    .aa-wrap {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    /* BANNER */
+    .aa-banner {
+      background: url('img/bg_red.webp') center/cover no-repeat;
+      border-bottom: none;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 13px;
+      color: #f5e6c8;
+      line-height: 1.5;
+      position: relative;
+    }
+
+    .aa-banner strong {
+      font-weight: 500;
+    }
+
+    .aa-banner a {
+      color: #f5e6c8;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .aa-banner-close {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 18px;
+      color: #f5e6c8;
+      background: none;
+      border: none;
+      line-height: 1;
+    }
+
+    /* NAV - full image background */
+    .aa-nav {
+      position: relative;
+      width: 100%;
+      height: 80px;
+      background: #AE1819;
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .aa-nav-overlay {
+      display: none;
+    }
+
+    .aa-nav-inner {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 36px;
+      height: 80px;
+    }
+
+    .aa-nav-logo img {
+      height: 52px;
+      display: block;
+      margin: auto;
+    }
+
+    .aa-nav-logo-text {
+      font-weight: 600;
+      font-size: 18px;
+      color: #fff;
+      display: none;
+    }
+
+    .aa-nav-menu {
+      display: flex;
+      gap: 26px;
+      align-items: center;
+    }
+
+    .aa-nav-menu a {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.2s;
+    }
+
+    .aa-nav-menu a:hover {
+      color: #fff;
+    }
+
+    .aa-nav-cta {
+      background: #fff;
+      color: #1a1a1a;
+      padding: 9px 20px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      font-family: 'DM Sans', sans-serif;
+      transition: background 0.2s;
+    }
+
+    .aa-nav-cta:hover {
+      background: #f0ede6;
+    }
+
+    /* HERO */
+    .aa-hero {
+      margin-top: 0;
+      padding: 16px 48px 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+      background: url('img/bg_red.webp') center/cover no-repeat;
+    }
+
+    .aa-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 46px;
+      font-weight: 700;
+      line-height: 1.15;
+      color: #f5e6c8;
+      margin-bottom: 18px;
+      letter-spacing: -1.5px;
+    }
+
+    .aa-hero-desc {
+      font-size: 15.5px;
+      color: #f5e6c8;
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
+
+    .aa-hero-desc strong {
+      color: #f5e6c8;
+      font-weight: 500;
+    }
+
+    .aa-form {
+      margin-bottom: 16px;
+    }
+
+    .aa-form label {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      color: #f5e6c8;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .aa-form-row {
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 50px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      padding: 5px 5px 5px 20px;
+      transition: box-shadow 0.2s;
+    }
+
+    .aa-form-row:focus-within {
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .aa-form-row input {
+      flex: 1;
+      border: none;
+      background: transparent;
+      font-size: 15px;
+      font-family: 'DM Sans', sans-serif;
+      outline: none;
+      color: #1a1a1a;
+      min-width: 0;
+    }
+
+    .aa-form-row input::placeholder {
+      color: #aaa;
+    }
+
+    .aa-form-btn {
+      background: #DEA53D;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 11px 22px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      white-space: nowrap;
+      transition: background 0.2s;
+      letter-spacing: 0.3px;
+      flex-shrink: 0;
+    }
+
+    .aa-form-btn:hover {
+      background: #c8922a;
+    }
+
+    .aa-form-note {
+      font-size: 11.5px;
+      color: rgba(245, 230, 200, 0.75);
+      line-height: 1.5;
+      margin-top: 10px;
+    }
+
+    .aa-form-note a {
+      color: rgba(245, 230, 200, 0.75);
+    }
+
+    .aa-social-proof {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .aa-avatars {
+      display: flex;
+    }
+
+    .aa-avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      margin-left: -8px;
+      font-size: 11px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    .aa-avatars .aa-avatar:first-child {
+      margin-left: 0;
+    }
+
+    .aa-stars {
+      color: #f0a500;
+      font-size: 14px;
+    }
+
+    .aa-proof-text {
+      font-size: 13px;
+      color: #f5e6c8;
+    }
+
+    /* HERO RIGHT - PHONE MOCK */
+    .aa-hero-right {
+      position: relative;
+      background: none;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .aa-phone {
+      background: #1c1c1e;
+      width: 170px;
+      height: 310px;
+      border-radius: 28px;
+      padding: 14px 10px;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .aa-phone-screen {
+      background: #fff;
+      border-radius: 18px;
+      flex: 1;
+      padding: 12px 10px;
+      overflow: hidden;
+    }
+
+    .aa-ps-tag {
+      font-size: 8px;
+      font-weight: 700;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 8px;
+    }
+
+    .aa-ps-h {
+      height: 7px;
+      background: #1a1a1a;
+      border-radius: 4px;
+      margin-bottom: 5px;
+      width: 80%;
+    }
+
+    .aa-ps-line {
+      height: 5px;
+      background: #e8e4dc;
+      border-radius: 3px;
+      margin-bottom: 4px;
+    }
+
+    .aa-ps-line.s {
+      width: 65%;
+    }
+
+    .aa-ps-line.xs {
+      width: 45%;
+    }
+
+    .aa-ps-gold {
+      height: 5px;
+      background: #d4a853;
+      border-radius: 3px;
+      margin-bottom: 4px;
+      width: 55%;
+    }
+
+    .aa-ps-divider {
+      height: 1px;
+      background: #f0ede6;
+      margin: 8px 0;
+    }
+
+    .aa-ps-avatar {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #d4a853;
+      margin-bottom: 6px;
+    }
+
+    .aa-ps-small {
+      height: 4px;
+      background: #e8e4dc;
+      border-radius: 2px;
+      margin-bottom: 3px;
+    }
+
+    .aa-ps-small.s {
+      width: 55%;
+    }
+
+    .aa-phone-badge {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      background: #fff;
+      border-radius: 10px;
+      padding: 8px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #1a1a1a;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    /* TESTIMONIALS */
+    .aa-testi {
+      padding: 56px 40px;
+      background: url('img/bg_red.webp') center/cover no-repeat;
+    }
+
+    .aa-testi-label {
+      text-align: center;
+      font-size: 11px;
+      font-weight: 500;
+      color: #f5e6c8;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      margin-bottom: 36px;
+    }
+
+    .aa-testi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .aa-testi-card {
+      background: url('img/bg_gold_clean_xd.webp') center/cover no-repeat;
+      border: 1px solid #e8e4dc;
+      border-radius: 14px;
+      padding: 20px;
+    }
+
+    .aa-tc-stars {
+      color: #f0a500;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .aa-tc-text {
+      font-size: 13px;
+      line-height: 1.65;
+      color: #3a2a10;
+      margin-bottom: 16px;
+    }
+
+    .aa-tc-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .aa-tc-av {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .aa-tc-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: #3a2a10;
+    }
+
+    .aa-tc-role {
+      font-size: 11px;
+      color: #7a5c30;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 1px;
+    }
+
+    /* CTA BOTTOM */
+    .aa-cta {
+      padding: 64px 40px;
+      text-align: center;
+      border-top: 1px solid #e8e4dc;
+      background: url('img/bg_gold_clean_xd.webp') center/cover no-repeat;
+    }
+
+    .aa-cta-proof {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .aa-cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 14px;
+    }
+
+    .aa-cta p {
+      font-size: 15px;
+      color: #3a2a10;
+      max-width: 480px;
+      margin: 0 auto 28px;
+      line-height: 1.7;
+    }
+
+    .aa-cta-form {
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 50px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 5px 5px 5px 20px;
+      max-width: 420px;
+      margin: 0 auto 10px;
+      transition: box-shadow 0.2s;
+    }
+
+    .aa-cta-form:focus-within {
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .aa-cta-form input {
+      flex: 1;
+      border: none;
+      background: transparent;
+      font-size: 15px;
+      font-family: 'DM Sans', sans-serif;
+      outline: none;
+      color: #1a1a1a;
+      min-width: 0;
+    }
+
+    .aa-cta-form input::placeholder {
+      color: #aaa;
+    }
+
+    .aa-cta-form button {
+      background: #DEA53D;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 11px 22px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background 0.2s;
+    }
+
+    .aa-cta-form button:hover {
+      background: #c8922a;
+    }
+
+    .aa-cta-note {
+      font-size: 12px;
+      color: #7a5c30;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .aa-cta-note a {
+      color: #7a5c30;
+    }
+
+    /* FOOTER */
+    .aa-footer {
+      background: #111;
+      color: #888;
+      padding: 48px 40px 28px;
+    }
+
+    .aa-footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 36px;
+    }
+
+    .aa-footer-logo {
+      font-weight: 600;
+      font-size: 18px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .aa-footer-desc {
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .aa-footer-col h4 {
+      font-size: 12px;
+      font-weight: 500;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+
+    .aa-footer-col a {
+      display: block;
+      font-size: 13px;
+      color: #888;
+      text-decoration: none;
+      margin-bottom: 8px;
+      transition: color 0.2s;
+    }
+
+    .aa-footer-col a:hover {
+      color: #fff;
+    }
+
+    .aa-footer-bottom {
+      border-top: 1px solid #222;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .aa-footer-copy {
+      font-size: 12px;
+    }
+
+    .aa-socials {
+      display: flex;
+      gap: 10px;
+    }
+
+    .aa-social {
+      width: 30px;
+      height: 30px;
+      background: #222;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 600;
+      color: #888;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .aa-social:hover {
+      background: #333;
+      color: #fff;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 700px) {
+      .aa-hero {
+        grid-template-columns: 1fr;
+        padding: 40px 24px;
+        gap: 32px;
+      }
+
+      .aa-hero h1 {
+        font-size: 32px;
+      }
+
+      .aa-hero-right {
+        height: 280px;
+      }
+
+      .aa-nav-menu {
+        display: none;
+      }
+
+      .aa-testi-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .aa-footer-top {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .aa-nav-inner {
+        padding: 0 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="aa-wrap">
+
+
+    <!-- NAV -->
+    <div class="aa-nav">
+      <div class="aa-nav-overlay"></div>
+      <div class="aa-nav-inner">
+        <div class="aa-nav-logo">
+          <img src="img/header_logo.svg" alt="Logo" />
+          <span class="aa-nav-logo-text">Ali Abdaal</span>
+        </div>
+        <div class="aa-nav-menu">
+          <a href="#">My Book</a>
+          <a href="#">Free Resources</a>
+          <a href="#">YouTube Academy</a>
+          <a href="#">LifeOS Productivity System</a>
+        </div>
+        <button class="aa-nav-cta">Join 230k+ Subscribers</button>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="aa-hero">
+      <div>
+        <h1>Free Weekly Productivity Insights</h1>
+        <p class="aa-hero-desc">
+          <strong>Join LifeNotes</strong> – my free, weekly(ish) newsletter where I share actionable productivity tips,
+          practical life advice, and high-quality insights from across the web, directly to your inbox.
+        </p>
+        <div class="aa-form">
+          <label>Your Email <span style="color:#c00">*</span></label>
+          <div class="aa-form-row">
+            <input type="email" placeholder="you@example.com" />
+            <button class="aa-form-btn">Subscribe</button>
+          </div>
+          <p class="aa-form-note">
+            By submitting this form, you'll be signed up to my free newsletter. I may also send you other emails about
+            my courses.
+            You can opt-out at any time. For more information, see our <a href="#">privacy policy.</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="aa-hero-right">
+        <img src="img/master_rezza.webp" alt="Master Rezza" style="width:100%;height:auto;display:block;" />
+      </div>
+    </section>
+
+
+    <!-- CTA BOTTOM -->
+    <section class="aa-cta">
+      <h2>Subscribe to LifeNotes</h2>
+      <p>Join a growing community of more than <strong>443,000 friendly readers.</strong> Each week, I share actionable
+        productivity tips, practical life advice, and highlights from my favourite books. It's free, and always will be.
+      </p>
+      <div class="aa-cta-form">
+        <input type="email" placeholder="Your email address" />
+        <button>Subscribe</button>
+      </div>
+      <p class="aa-cta-note">By submitting this form, you'll be signed up to my free newsletter. You can opt-out at any
+        time. <a href="#">Privacy policy.</a></p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="aa-footer">
+      <div class="aa-footer-top">
+        <div>
+          <div class="aa-footer-logo">Ali Abdaal</div>
+          <p class="aa-footer-desc">Doctor turned YouTuber, author, and entrepreneur. Helping people live and work more
+            enjoyably.</p>
+        </div>
+        <div class="aa-footer-col">
+          <h4>More</h4>
+          <a href="#">About</a>
+          <a href="#">Jobs</a>
+          <a href="#">Contact</a>
+          <a href="#">My Account</a>
+        </div>
+        <div class="aa-footer-col">
+          <h4>Free Content</h4>
+          <a href="#">Newsletter</a>
+          <a href="#">Articles & Guides</a>
+          <a href="#">Podcast</a>
+          <a href="#">Videos</a>
+          <a href="#">Book Notes</a>
+        </div>
+        <div class="aa-footer-col">
+          <h4>Products</h4>
+          <a href="#">My Book</a>
+          <a href="#">YouTuber Academy</a>
+          <a href="#">LifeOS</a>
+        </div>
+      </div>
+      <div class="aa-footer-bottom">
+        <span class="aa-footer-copy">© Ali Abdaal 2025. All rights reserved.</span>
+        <div class="aa-socials">
+          <a class="aa-social" href="#">YT</a>
+          <a class="aa-social" href="#">IG</a>
+          <a class="aa-social" href="#">LI</a>
+          <a class="aa-social" href="#">TT</a>
+          <a class="aa-social" href="#">X</a>
+          <a class="aa-social" href="#">FB</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>
