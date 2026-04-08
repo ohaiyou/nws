@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | The Emperor's Notes</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+    rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #fff;
+      color: #3a2a10;
+    }
+
+    .aa-wrap {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    /* NAV */
+    .aa-nav {
+      position: relative;
+      width: 100%;
+      height: 80px;
+      background: #AE1819;
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .aa-nav-inner {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 36px;
+      height: 80px;
+    }
+
+    .aa-nav-logo img {
+      height: 52px;
+      display: block;
+      margin: auto;
+    }
+
+    .aa-nav-menu {
+      display: flex;
+      gap: 26px;
+      align-items: center;
+    }
+
+    .aa-nav-menu a {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.2s;
+    }
+
+    .aa-nav-menu a:hover {
+      color: #fff;
+    }
+
+    .aa-nav-cta {
+      background: #fff;
+      color: #1a1a1a;
+      padding: 9px 20px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      font-family: 'DM Sans', sans-serif;
+      transition: background 0.2s;
+    }
+
+    .aa-nav-cta:hover {
+      background: #f0ede6;
+    }
+
+    /* TOC */
+    .aa-toc {
+      background: #fdf8f2;
+      border: 1px solid #e8e4dc;
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 40px;
+    }
+
+    .aa-toc-title {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #7a5c30;
+      margin-bottom: 14px;
+    }
+
+    .aa-toc ol {
+      margin: 0 0 0 18px;
+    }
+
+    .aa-toc ol li {
+      font-size: 14px;
+      line-height: 1.8;
+      color: #3a2a10;
+    }
+
+    .aa-toc ol li a {
+      color: #AE1819;
+      text-decoration: none;
+    }
+
+    .aa-toc ol li a:hover {
+      text-decoration: underline;
+    }
+
+    /* CONTENT */
+    .aa-content {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 64px 24px 80px;
+    }
+
+    .aa-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      color: #3a2a10;
+      margin-bottom: 8px;
+    }
+
+    .aa-content .aa-pp-date {
+      font-size: 13px;
+      color: #7a5c30;
+      margin-bottom: 16px;
+    }
+
+    .aa-content .aa-pp-intro {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #5a4020;
+      background: #fdf8f2;
+      border-left: 4px solid #AE1819;
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 40px;
+    }
+
+    .aa-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: #3a2a10;
+      margin-top: 48px;
+      margin-bottom: 14px;
+      padding-top: 8px;
+    }
+
+    .aa-content h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #3a2a10;
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
+
+    .aa-content p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #3a2a10;
+      margin-bottom: 16px;
+    }
+
+    .aa-content ul,
+    .aa-content ol {
+      margin: 0 0 16px 22px;
+    }
+
+    .aa-content ul li,
+    .aa-content ol li {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #3a2a10;
+      margin-bottom: 6px;
+    }
+
+    .aa-content a {
+      color: #AE1819;
+      text-decoration: underline;
+    }
+
+    .aa-divider {
+      border: none;
+      border-top: 1px solid #e8e4dc;
+      margin: 48px 0;
+    }
+
+    .aa-highlight-box {
+      background: #fdf8f2;
+      border: 1px solid #e8e4dc;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 20px;
+    }
+
+    .aa-highlight-box p {
+      margin-bottom: 0;
+    }
+
+    /* FOOTER */
+    .aa-footer {
+      background: #111;
+      color: #888;
+      padding: 48px 40px 28px;
+    }
+
+    .aa-footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 36px;
+    }
+
+    .aa-footer-logo {
+      font-weight: 600;
+      font-size: 18px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .aa-footer-desc {
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .aa-footer-col h4 {
+      font-size: 12px;
+      font-weight: 500;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+
+    .aa-footer-col a {
+      display: block;
+      font-size: 13px;
+      color: #888;
+      text-decoration: none;
+      margin-bottom: 8px;
+      transition: color 0.2s;
+    }
+
+    .aa-footer-col a:hover {
+      color: #fff;
+    }
+
+    .aa-footer-bottom {
+      border-top: 1px solid #222;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .aa-footer-copy {
+      font-size: 12px;
+    }
+
+    .aa-socials {
+      display: flex;
+      gap: 10px;
+    }
+
+    .aa-social {
+      width: 30px;
+      height: 30px;
+      background: #222;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 600;
+      color: #888;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .aa-social:hover {
+      background: #333;
+      color: #fff;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 700px) {
+      .aa-nav-menu {
+        display: none;
+      }
+
+      .aa-nav-inner {
+        padding: 0 20px;
+      }
+
+      .aa-content h1 {
+        font-size: 28px;
+      }
+
+      .aa-footer-top {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="aa-wrap">
+
+    <!-- NAV -->
+    <div class="aa-nav">
+      <div class="aa-nav-inner">
+        <div class="aa-nav-logo">
+          <img src="img/header_logo.svg" alt="Logo" />
+        </div>
+        <div class="aa-nav-menu">
+          <a href="index.html">Beranda</a>
+        </div>
+        <button class="aa-nav-cta">Berlangganan Sekarang</button>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="aa-content">
+      <h1>Kebijakan Privasi</h1>
+      <p class="aa-pp-date">Terakhir diperbarui: 8 April 2026</p>
+
+      <p class="aa-pp-intro">
+        Kebijakan Privasi ini menjelaskan secara lengkap bagaimana <strong>The Emperor's Notes</strong> mengumpulkan, menyimpan, menggunakan, dan melindungi informasi pribadi Anda. Dengan berlangganan newsletter kami atau menggunakan layanan kami, Anda menyatakan telah membaca, memahami, dan menyetujui kebijakan ini. Kami berkomitmen penuh untuk menjaga privasi dan keamanan data Anda sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia, termasuk Undang-Undang Nomor 27 Tahun 2022 tentang Perlindungan Data Pribadi (UU PDP).
+      </p>
+
+      <!-- TABLE OF CONTENTS -->
+      <div class="aa-toc">
+        <div class="aa-toc-title">Daftar Isi</div>
+        <ol>
+          <li><a href="#definisi">Definisi dan Istilah</a></li>
+          <li><a href="#pengumpulan">Informasi yang Kami Kumpulkan</a></li>
+          <li><a href="#penggunaan">Bagaimana Kami Menggunakan Informasi Anda</a></li>
+          <li><a href="#dasar-hukum">Dasar Hukum Pemrosesan Data</a></li>
+          <li><a href="#berbagi">Berbagi dan Pengungkapan Informasi</a></li>
+          <li><a href="#penyimpanan">Penyimpanan dan Retensi Data</a></li>
+          <li><a href="#keamanan">Keamanan Data</a></li>
+          <li><a href="#cookie">Cookie dan Teknologi Pelacakan</a></li>
+          <li><a href="#hak">Hak-Hak Anda sebagai Subjek Data</a></li>
+          <li><a href="#anak">Perlindungan Data Anak</a></li>
+          <li><a href="#transfer">Transfer Data Internasional</a></li>
+          <li><a href="#perubahan">Perubahan Kebijakan Privasi</a></li>
+          <li><a href="#kontak">Hubungi Kami</a></li>
+        </ol>
+      </div>
+
+      <hr class="aa-divider" />
+
+      <!-- SECTION 1 -->
+      <h2 id="definisi">1. Definisi dan Istilah</h2>
+      <p>Dalam Kebijakan Privasi ini, istilah-istilah berikut memiliki arti sebagai berikut:</p>
+      <ul>
+        <li><strong>"Kami", "Pengelola", atau "The Emperor's Notes"</strong> merujuk pada pengelola newsletter dan website The Emperor's Notes.</li>
+        <li><strong>"Anda" atau "Pengguna"</strong> merujuk pada setiap individu yang mengunjungi website kami, mendaftar ke newsletter, atau menggunakan layanan kami.</li>
+        <li><strong>"Data Pribadi"</strong> adalah informasi apa pun yang dapat digunakan untuk mengidentifikasi Anda secara langsung maupun tidak langsung, termasuk namun tidak terbatas pada nama, alamat email, dan data aktivitas online.</li>
+        <li><strong>"Pemrosesan Data"</strong> adalah setiap tindakan yang dilakukan terhadap data pribadi, termasuk pengumpulan, penyimpanan, penggunaan, pengungkapan, dan penghapusan.</li>
+        <li><strong>"Newsletter"</strong> merujuk pada email berkala yang kami kirimkan kepada pelanggan yang berisi konten seputar imperial feng shui dan topik terkait.</li>
+        <li><strong>"Cookie"</strong> adalah file teks kecil yang disimpan di perangkat Anda oleh browser web saat Anda mengunjungi website kami.</li>
+        <li><strong>"Pihak Ketiga"</strong> adalah entitas atau individu di luar organisasi The Emperor's Notes yang terlibat dalam penyediaan layanan kepada kami.</li>
+      </ul>
+
+      <hr class="aa-divider" />
+
+      <!-- SECTION 2 -->
+      <h2 id="pengumpulan">2. Informasi yang Kami Kumpulkan</h2>
+      <p>Kami mengumpulkan berbagai jenis informasi dalam rangka memberikan layanan terbaik kepada Anda. Informasi tersebut kami peroleh melalui beberapa cara:</p>
+
+      <h3>2.1 Informasi yang Anda Berikan Secara Langsung</h3>
+      <ul>
+        <li><strong>Alamat email</strong> — dikumpulkan saat Anda mendaftar ke newsletter kami melalui formulir di website.</li>
+        <li><strong>Nama</strong> — dikumpulkan jika Anda memilih untuk mencantumkannya saat pendaftaran.</li>
+        <li><strong>Pesan atau pertanyaan</strong> — jika Anda menghubungi kami melalui email atau saluran komunikasi lainnya.</li>
+        <li><strong>Preferensi konten</strong> — informasi tentang topik feng shui yang paling Anda minati, jika Anda memilih untuk memberitahukannya.</li>
+      </ul>
+
+      <h3>2.2 Informasi yang Dikumpulkan Secara Otomatis</h3>
+      <p>Ketika Anda mengunjungi website kami atau berinteraksi dengan email kami, kami dapat secara otomatis mengumpulkan:</p>
+      <ul>
+        <li><strong>Data interaksi email</strong> — termasuk apakah Anda membuka email, tautan mana yang Anda klik, dan waktu interaksi tersebut terjadi.</li>
+        <li><strong>Alamat IP</strong> — digunakan untuk menentukan lokasi umum (negara/kota) dan untuk tujuan keamanan.</li>
+        <li><strong>Data browser dan perangkat</strong> — jenis browser, sistem operasi, jenis perangkat (desktop/mobile), dan resolusi layar.</li>
+        <li><strong>Data navigasi website</strong> — halaman yang Anda kunjungi, durasi kunjungan, halaman sebelumnya yang Anda kunjungi (referrer), dan tautan yang Anda klik.</li>
+        <li><strong>Cookie dan data pelacakan serupa</strong> — dijelaskan lebih rinci di Bagian 8.</li>
+      </ul>
+
+      <h3>2.3 Informasi dari Sumber Pihak Ketiga</h3>
+      <p>Dalam beberapa kasus, kami dapat menerima informasi tentang Anda dari sumber pihak ketiga, seperti:</p>
+      <ul>
+        <li>Platform media sosial, jika Anda berinteraksi dengan konten kami di sana dan platform tersebut berbagi data dengan kami sesuai pengaturan privasi Anda.</li>
+        <li>Penyedia layanan analitik pihak ketiga yang membantu kami memahami bagaimana pengguna menggunakan layanan kami.</li>
+      </ul>
+
+      <hr class="aa-divider" />
+
+      <!-- SECTION 3 -->
+      <h2 id="penggunaan">3. Bagaimana Kami Menggunakan Informasi Anda</h2>
+      <p>Informasi yang kami kumpulkan digunakan semata-mata untuk keperluan yang sah dan relevan dengan layanan kami. Berikut adalah rincian penggunaan data Anda:</p>
+
+      <h3>3.1 Pengiriman Newsletter dan Konten</h3>
+      <ul>
+        <li>Mengirimkan newsletter mingguan berisi tips dan wawasan seputar imperial feng shui langsung ke kotak masuk email Anda.</li>
+        <li>Mengirimkan konten khusus atau edisi spesial yang relevan dengan minat Anda.</li>
+        <li>Memberitahu Anda tentang konten baru, artikel, atau sumber daya yang kami terbitkan.</li>
+      </ul>
+
+      <h3>3.2 Komunikasi Layanan</h3>
+      <ul>
+        <li>Mengirimkan email konfirmasi pendaftaran dan ucapan selamat datang.</li>
+        <li>Merespons pertanyaan, masukan, atau keluhan yang Anda sampaikan kepada kami.</li>
+        <li>Memberitahukan perubahan penting pada layanan atau kebijakan privasi kami.</li>
+        <li>Memproses permintaan berhenti berlangganan (unsubscribe) Anda secara cepat dan akurat.</li>
+      </ul>
+
+      <h3>3.3 Personalisasi dan Peningkatan Layanan</h3>
+      <ul>
+        <li>Memahami preferensi dan minat Anda agar kami dapat menyajikan konten yang lebih relevan.</li>
+        <li>Menganalisis pola keterbukaan dan klik email untuk menilai topik yang paling diminati pembaca.</li>
+        <li>Meningkatkan struktur, desain, dan konten newsletter berdasarkan masukan dan perilaku pembaca.</li>
+        <li>Melakukan segmentasi daftar pelanggan untuk memastikan Anda hanya menerima konten yang sesuai dengan minat Anda.</li>
+      </ul>
+
+      <h3>3.4 Keamanan dan Kepatuhan</h3>
+      <ul>
+        <li>Mendeteksi, mencegah, dan menangani aktivitas penipuan, spam, atau penyalahgunaan layanan.</li>
+        <li>Mematuhi kewajiban hukum dan regulasi yang berlaku.</li>
+        <li>Melindungi hak, properti, dan keselamatan kami serta pengguna lainnya.</li>
+      </ul>
+
+      <hr class="aa-divider" />
+
+      <!-- SECTION 4 -->
+      <h2 id="dasar-hukum">4. Dasar Hukum Pemrosesan Data</h2>
+      <p>Sesuai dengan Undang-Undang Nomor 27 Tahun 2022 tentang Perlindungan Data Pribadi (UU PDP), kami memproses data pribadi Anda berdasarkan dasar hukum berikut:</p>
+
+      <div class="aa-highlight-box">
+        <p><strong>Persetujuan (Consent)</strong> — Dengan mendaftarkan alamat email Anda ke newsletter kami, Anda memberikan persetujuan eksplisit kepada kami untuk memproses data Anda guna keperluan pengiriman newsletter dan komunikasi terkait. Anda dapat menarik persetujuan ini kapan saja dengan melakukan unsubscribe.</p>
+      </div>
+
+      <div class="aa-highlight-box">
+        <p><strong>Kepentingan Sah (Legitimate Interest)</strong> — Kami memproses data tertentu berdasarkan kepentingan sah kami, seperti menjaga keamanan layanan, mencegah penipuan, dan meningkatkan kualitas newsletter, sepanjang tidak mengabaikan hak dan kebebasan dasar Anda.</p>
+      </div>
+
+      <div class="aa-highlight-box">
+        <p><strong>Kewajiban Hukum (Legal Obligation)</strong> — Dalam situasi tertentu, kami mungkin diwajibkan oleh hukum untuk menyimpan atau mengungkapkan data Anda, misalnya atas permintaan dari otoritas yang berwenang.</p>
+      </div>
+
+      <hr class="aa-divider" />
+
+      <!-- SECTION 5 -->
+      <h2 id="berbagi">5. Berbagi dan Pengungkapan Informasi</h2>
+      <p>Kami sangat menjaga kepercayaan Anda dan tidak pernah menjual, menyewakan, atau memperdagangkan data pribadi Anda kepada pihak mana pun untuk kepentingan komersial mereka sendiri.</p>
+
+      <h3>5.1 Penyedia Layanan Tepercaya</h3>
+      <p>Kami dapat berbagi data Anda dengan pihak ketiga yang membantu kami dalam menjalankan layanan, termasuk:</p>
+      <ul>
+        <li><strong>Platform pengiriman email</strong> — untuk mengelola daftar pelanggan dan mengirimkan newsletter.</li>
+        <li><strong>Penyedia layanan analitik</strong> — untuk menganalisis performa newsletter dan website.</li>
+        <li><strong>Penyedia layanan hosting</strong> — untuk menjalankan dan memelihara website kami.</li>
+      </ul>
+      <p>Semua pihak ketiga ini diwajibkan secara kontraktual untuk menjaga kerahasiaan data Anda dan hanya menggunakannya sesuai instruksi kami serta tujuan yang telah ditetapkan.</p>
+
+      <h3>5.2 Kewajiban Hukum</h3>
+      <p>Kami dapat mengungkapkan data Anda kepada pihak berwenang jika kami diwajibkan oleh hukum, peraturan perundang-undangan, perintah pengadilan, atau proses hukum lainnya, termasuk untuk:</p>
+      <ul>
+        <li>Merespons permintaan resmi dari lembaga pemerintah atau penegak hukum.</li>
+        <li>Melindungi hak hukum, privasi, keselamatan, atau properti kami maupun pengguna lainnya.</li>
+        <li>Mendeteksi, mencegah, atau menangani penipuan, masalah keamanan, atau masalah teknis.</li>
+      </ul>
+
+      <h3>5.3 Pengalihan Bisnis</h3>
+      <p>Jika The Emperor's Notes mengalami merger, akuisisi, reorganisasi, atau penjualan aset, data pribadi Anda dapat dialihkan sebagai bagian dari transaksi tersebut. Kami akan memberitahu Anda melalui email dan/atau pemberitahuan di website kami sebelum data Anda dialihkan dan tunduk pada kebijakan privasi yang berbeda.</p>
+
+      <hr class="aa-divider" />
+
+      <!-- SECTION 6 -->
+      <h2 id="penyimpanan">6. Penyimpanan dan Retensi Data</h2>
+      <p>Kami menyimpan data pribadi Anda hanya selama diperlukan untuk memenuhi tujuan yang ditetapkan dalam kebijakan ini, atau selama diwajibkan oleh hukum yang berlaku.</p>
+
+      <ul>
+        <li><strong>Data pelanggan aktif</strong> — disimpan selama Anda masih terdaftar sebagai pelanggan newsletter kami.</li>
+        <li><strong>Data setelah unsubscribe</strong> — setelah Anda berhenti berlangganan, kami menyimpan catatan bahwa Anda telah berhenti berlangganan selama maksimal 3 tahun untuk mencegah pengiriman email yang tidak diinginkan di masa depan, kemudian data dihapus secara permanen.</li>
+        <li><strong>Data log dan keamanan</strong> — disimpan selama maksimal 12 bulan untuk keperluan keamanan dan pemecahan masalah teknis.</li>
+        <li><strong>Data yang diperlukan oleh hukum</strong> — disimpan sesuai dengan jangka waktu yang diwajibkan oleh peraturan perundang-undangan yang berlaku.</li>
+      </ul>
+
+      <p>Setelah periode retensi berakhir, data Anda akan dihapus secara aman atau dianonimkan sehingga tidak lagi dapat dikaitkan dengan identitas Anda.</p>
+
+      <hr class="aa-divider" />
+
+      <!-- SECTION 7 -->
+      <h2 id="keamanan">7. Keamanan Data</h2>
+      <p>Kami berkomitmen untuk melindungi data pribadi Anda menggunakan langkah-langkah keamanan teknis dan organisasi yang wajar dan proporsional. Langkah-langkah tersebut mencakup:</p>
+
+      <h3>7.1 Perlindungan Teknis</h3>
+      <ul>
+        <li>Penggunaan protokol enkripsi SSL/TLS untuk semua transmisi data antara browser Anda dan server kami.</li>
+        <li>Penyimpanan data pada server yang dilindungi dengan kontrol akses ketat.</li>
+        <li>Penggunaan kata sandi yang kuat dan autentikasi dua faktor untuk akses ke sistem yang menyimpan data Anda.</li>
+        <li>Pembaruan rutin pada sistem dan perangkat lunak untuk mengatasi kerentanan keamanan.</li>
+      </ul>
+
+      <h3>7.2 Perlindungan Organisasi</h3>
+      <ul>
+        <li>Pembatasan akses ke data pribadi hanya kepada mereka yang membutuhkannya untuk menjalankan fungsi layanan.</li>
+        <li>Perjanjian kerahasiaan dengan semua pihak yang memiliki akses ke data Anda.</li>
+        <li>Prosedur penanganan insiden keamanan data yang jelas dan terdokumentasi.</li>
+      </ul>
+
+      <h3>7.3 Keterbatasan Jaminan</h3>
+      <p>Meskipun kami telah mengambil langkah-langkah keamanan yang memadai, perlu dipahami bahwa tidak ada metode transmisi data melalui internet atau metode penyimpanan elektronik yang 100% aman. Jika terjadi pelanggaran keamanan data yang berdampak pada data Anda, kami akan memberitahu Anda sesuai dengan kewajiban hukum yang berlaku, dalam jangka waktu yang ditentukan oleh UU PDP.</p>
+
+      <hr class="aa-divider" />
+
+      <!-- SECTION 8 -->
+      <h2 id="cookie">8. Cookie dan Teknologi Pelacakan</h2>
+      <p>Website kami menggunakan cookie dan teknologi pelacakan serupa untuk meningkatkan pengalaman Anda dan memahami bagaimana layanan kami digunakan.</p>
+
+      <h3>8.1 Jenis Cookie yang Kami Gunakan</h3>
+      <ul>
+        <li><strong>Cookie Esensial</strong> — Cookie yang diperlukan untuk menjalankan fungsi dasar website, seperti mengingat preferensi Anda dan memastikan website berfungsi dengan benar. Cookie ini tidak dapat dinonaktifkan.</li>
+        <li><strong>Cookie Analitik</strong> — Digunakan untuk mengumpulkan informasi tentang bagaimana pengunjung menggunakan website kami, seperti halaman mana yang paling sering dikunjungi dan apakah pengunjung menerima pesan error. Informasi ini digunakan secara anonim dan agregat.</li>
+        <li><strong>Cookie Fungsional</strong> — Memungkinkan website mengingat pilihan yang Anda buat (seperti bahasa atau wilayah) dan memberikan fitur yang lebih personal.</li>
+        <li><strong>Cookie Pemasaran</strong> — Digunakan untuk melacak pengunjung di berbagai website guna menampilkan iklan yang relevan. Kami mungkin menggunakan ini untuk memahami efektivitas kampanye kami.</li>
+      </ul>
+
+      <h3>8.2 Cookie Pihak Ketiga</h3>
+      <p>Beberapa halaman website kami mungkin menggunakan cookie dari pihak ketiga seperti Google Analytics untuk membantu kami memahami pola penggunaan website. Pihak ketiga ini memiliki kebijakan privasi mereka sendiri.</p>
+
+      <h3>8.3 Mengelola Cookie</h3>
+      <p>Anda dapat mengontrol dan mengelola cookie melalui pengaturan browser Anda. Sebagian besar browser memungkinkan Anda untuk:</p>
+      <ul>
+        <li>Melihat cookie apa saja yang tersimpan di perangkat Anda.</li>
+        <li>Menghapus semua atau sebagian cookie.</li>
+        <li>Memblokir cookie dari semua atau situs tertentu.</li>
+        <li>Memblokir cookie pihak ketiga.</li>
+      </ul>
+      <p>Perlu diperhatikan bahwa menonaktifkan cookie tertentu dapat memengaruhi fungsionalitas website kami dan pengalaman Anda secara keseluruhan.</p>
+
+      <hr class="aa-divider" />
+
+      <!-- SECTION 9 -->
+      <h2 id="hak">9. Hak-Hak Anda sebagai Subjek Data</h2>
+      <p>Berdasarkan UU PDP dan peraturan perlindungan data yang berlaku, Anda memiliki sejumlah hak yang berkaitan dengan data pribadi Anda. Kami berkomitmen untuk memfasilitasi pelaksanaan hak-hak tersebut.</p>
+
+      <h3>9.1 Hak Akses</h3>
+      <p>Anda berhak meminta konfirmasi apakah kami memproses data pribadi Anda dan mendapatkan salinan data pribadi yang kami miliki tentang Anda, beserta informasi tentang bagaimana data tersebut digunakan.</p>
+
+      <h3>9.2 Hak Koreksi</h3>
+      <p>Jika data pribadi Anda tidak akurat atau tidak lengkap, Anda berhak meminta kami untuk memperbaiki atau melengkapinya. Kami akan menindaklanjuti permintaan tersebut dalam waktu yang wajar.</p>
+
+      <h3>9.3 Hak Penghapusan ("Hak untuk Dilupakan")</h3>
+      <p>Anda berhak meminta penghapusan data pribadi Anda dalam kondisi tertentu, misalnya ketika data tidak lagi diperlukan untuk tujuan awal pengumpulannya, atau ketika Anda menarik persetujuan yang menjadi dasar pemrosesan. Namun, hak ini tidak berlaku mutlak dan dapat dibatasi oleh kewajiban hukum tertentu.</p>
+
+      <h3>9.4 Hak Pembatasan Pemrosesan</h3>
+      <p>Anda berhak meminta kami untuk membatasi pemrosesan data Anda dalam situasi tertentu, seperti ketika Anda mempertanyakan keakuratan data atau menolak pemrosesan berdasarkan kepentingan sah kami.</p>
+
+      <h3>9.5 Hak Portabilitas Data</h3>
+      <p>Anda berhak menerima data pribadi yang telah Anda berikan kepada kami dalam format yang terstruktur, umum digunakan, dan dapat dibaca mesin, serta berhak mentransfernya ke pengendali lain.</p>
+
+      <h3>9.6 Hak Keberatan</h3>
+      <p>Anda berhak mengajukan keberatan terhadap pemrosesan data pribadi Anda yang dilakukan berdasarkan kepentingan sah kami atau untuk tujuan pemasaran langsung. Setelah Anda mengajukan keberatan untuk tujuan pemasaran langsung, kami akan segera menghentikan pemrosesan untuk tujuan tersebut.</p>
+
+      <h3>9.7 Hak Berhenti Berlangganan</h3>
+      <p>Anda dapat berhenti berlangganan newsletter kami kapan saja dengan:</p>
+      <ul>
+        <li>Mengklik tautan "Unsubscribe" yang selalu tersedia di bagian bawah setiap email yang kami kirimkan.</li>
+        <li>Mengirimkan permintaan langsung kepada kami melalui email.</li>
+      </ul>
+      <p>Permintaan unsubscribe akan diproses dalam waktu maksimal 5 hari kerja. Setelah itu, Anda tidak akan lagi menerima newsletter dari kami.</p>
+
+      <h3>9.8 Cara Mengajukan Permintaan</h3>
+      <p>Untuk menggunakan hak-hak di atas, silakan hubungi kami melalui informasi kontak yang tersedia di Bagian 13. Kami akan merespons permintaan Anda dalam waktu 30 hari kalender. Dalam beberapa kasus yang kompleks, kami mungkin memerlukan waktu hingga 60 hari dan akan memberitahu Anda jika ini terjadi.</p>
+
+      <hr class="aa-divider" />
+
+      <!-- SECTION 10 -->
+      <h2 id="anak">10. Perlindungan Data Anak</h2>
+      <p>Layanan kami tidak ditujukan untuk anak-anak di bawah usia 18 tahun. Kami tidak secara sengaja mengumpulkan data pribadi dari anak-anak. Jika Anda adalah orang tua atau wali yang mengetahui bahwa anak di bawah pengawasan Anda telah memberikan data pribadi mereka kepada kami tanpa persetujuan Anda, harap hubungi kami segera. Kami akan menghapus data tersebut dari sistem kami sesegera mungkin.</p>
+
+      <hr class="aa-divider" />
+
+      <!-- SECTION 11 -->
+      <h2 id="transfer">11. Transfer Data Internasional</h2>
+      <p>Dalam operasional layanan kami, data Anda mungkin disimpan atau diproses di server yang berlokasi di luar wilayah Indonesia, khususnya jika kami menggunakan penyedia layanan pihak ketiga (seperti platform email marketing) yang beroperasi secara internasional.</p>
+      <p>Dalam situasi demikian, kami memastikan bahwa setiap transfer data internasional dilakukan dengan perlindungan yang memadai, termasuk:</p>
+      <ul>
+        <li>Memastikan negara tujuan memiliki standar perlindungan data yang setara.</li>
+        <li>Menerapkan klausul kontraktual standar yang mewajibkan penerima data untuk melindungi data Anda sesuai standar yang berlaku.</li>
+        <li>Menggunakan penyedia layanan yang telah tersertifikasi dalam program perlindungan data yang diakui secara internasional.</li>
+      </ul>
+
+      <hr class="aa-divider" />
+
+      <!-- SECTION 12 -->
+      <h2 id="perubahan">12. Perubahan Kebijakan Privasi</h2>
+      <p>Kami berhak untuk memperbarui atau mengubah Kebijakan Privasi ini dari waktu ke waktu. Perubahan tersebut dapat terjadi karena berbagai alasan, termasuk perubahan praktik bisnis kami, perubahan regulasi yang berlaku, atau peningkatan layanan kami.</p>
+      <p>Jika kami melakukan perubahan yang signifikan, kami akan:</p>
+      <ul>
+        <li>Memperbarui tanggal "Terakhir diperbarui" di bagian atas halaman ini.</li>
+        <li>Mengirimkan pemberitahuan kepada Anda melalui email setidaknya 14 hari sebelum perubahan berlaku, untuk perubahan yang bersifat material.</li>
+        <li>Menyediakan ringkasan perubahan yang jelas agar mudah dipahami.</li>
+      </ul>
+      <p>Kami mendorong Anda untuk meninjau halaman ini secara berkala guna memastikan Anda selalu mengetahui informasi terbaru tentang bagaimana kami melindungi data Anda. Penggunaan layanan kami yang berkelanjutan setelah perubahan kebijakan diberlakukan dianggap sebagai penerimaan Anda terhadap perubahan tersebut.</p>
+
+      <hr class="aa-divider" />
+
+      <!-- SECTION 13 -->
+      <h2 id="kontak">13. Hubungi Kami</h2>
+      <p>Jika Anda memiliki pertanyaan, kekhawatiran, atau permintaan terkait Kebijakan Privasi ini atau pemrosesan data pribadi Anda, jangan ragu untuk menghubungi kami. Kami berkomitmen untuk merespons setiap pertanyaan dengan serius dan transparan.</p>
+
+      <div class="aa-highlight-box">
+        <p><strong>The Emperor's Notes</strong><br />
+        Pengelola Data Pribadi<br />
+        Email: <a href="mailto:privacy@theemperorsnotes.com">privacy@theemperorsnotes.com</a><br />
+        Website: <a href="index.html">theemperorsnotes.com</a></p>
+      </div>
+
+      <p>Kami akan berusaha merespons setiap pertanyaan atau permintaan Anda dalam waktu 5 hari kerja. Untuk permintaan yang berkaitan dengan hak-hak data Anda, kami akan memberikan tanggapan penuh dalam waktu 30 hari kalender sebagaimana diwajibkan oleh UU PDP.</p>
+
+      <hr class="aa-divider" />
+
+      <p style="font-size:14px; color:#7a5c30; text-align:center;">Dengan berlangganan newsletter The Emperor's Notes, Anda menyatakan telah membaca, memahami, dan menyetujui Kebijakan Privasi ini sepenuhnya.</p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="aa-footer">
+      <div class="aa-footer-top">
+        <div>
+          <div class="aa-footer-logo">The Emperor's Notes</div>
+          <p class="aa-footer-desc">Newsletter mingguan tentang imperial feng shui untuk rumah, apartemen, toko, kantor, dan pabrik.</p>
+        </div>
+        <div class="aa-footer-col">
+          <h4>Navigasi</h4>
+          <a href="index.html">Beranda</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+        <div class="aa-footer-col">
+          <h4>Konten</h4>
+          <a href="#">Newsletter</a>
+          <a href="#">Artikel</a>
+        </div>
+        <div class="aa-footer-col">
+          <h4>Ikuti Kami</h4>
+          <a href="#">YouTube</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+      <div class="aa-footer-bottom">
+        <span class="aa-footer-copy">© The Emperor's Notes 2026. All rights reserved.</span>
+        <div class="aa-socials">
+          <a class="aa-social" href="#">YT</a>
+          <a class="aa-social" href="#">IG</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>
